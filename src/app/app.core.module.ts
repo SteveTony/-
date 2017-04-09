@@ -5,6 +5,8 @@ import { IonicErrorHandler } from "ionic-angular";
 
 //配置服务
 import { AppConfig } from './app.config';
+import { AppVersion } from '@ionic-native/app-version';
+import { Device } from '@ionic-native/device';
 
 
 //数据服务
@@ -14,6 +16,7 @@ import { HttpDataService } from "../providers/datas/httpData.Service";
 
 //业务服务
 import { UserService } from "../providers/user.Service";
+import { InfoService } from "../providers/info.Service";
 
 //自定义管道
 import { SafeHtmlPipe } from '../pipes/safeHtml.pipe';
@@ -32,12 +35,14 @@ import { SafeResourceUrlPipe } from '../pipes/safeResourceUrl.pipe';
 	exports: [SafeHtmlPipe, SafeScriptPipe, SafeStylePipe, SafeUrlPipe, SafeResourceUrlPipe],
 	providers: [
 		AppConfig,
+		AppVersion,
 		HttpDataService,
 		AbstractService,
+		Device,
 		{ provide: AbstractDataService, useExisting: HttpDataService },
 		{ provide: ErrorHandler, useClass: IonicErrorHandler },
-		UserService
-		// InfoService
+		UserService,
+		InfoService
 	],
 })
 export class CoreModule {

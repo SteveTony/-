@@ -1,12 +1,12 @@
 /**
  * Modify by Blow on 2017-03-26.
  */
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { ModalController, LoadingController, ToastController, AlertController, Alert } from 'ionic-angular';
+import { Component, OnInit,ViewChild } from '@angular/core';
+import { ModalController, LoadingController, ToastController, AlertController } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
 import { UserService } from "../../providers/user.Service";
-import { UserInfor } from "../../Entities/UserInfor";
-import { CourseData } from "../../Entities/CourseData";
+import { UserInfor } from "../../entities/UserInfor";
+import { CourseData } from "../../entities/CourseData";
 // import { UrpInfo } from "../../Entities/UrpInfo";
 import { AbstractComponent } from "../../interfaces/abstract-component";
 import { AppConfig } from '../../app/app.config';

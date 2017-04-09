@@ -68,7 +68,7 @@ export class AppConfig {
          * 本机测试
          */
         //测试地址
-        //webBaseUrl: "http://git.ynpay.cc:20000/v1",
+
         //正式地址
         webBaseUrl: "http://202.203.209.96/",
         //urp的token
@@ -209,8 +209,11 @@ export class AppConfig {
     /**
      * 缓存键值
      */
-    static cacheKeys = {
-
+    cacheKeys = {
+        username:"urp用户名",
+        password:"密码",
+        //课程成绩的对象
+        //推荐课程的对象
     };
 
     /**
